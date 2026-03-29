@@ -11,7 +11,7 @@ export const options = {
 // Основная функция с которой начинается тест
 export default function () {
     const res = http.get('https://quickpizza.grafana.com/');
-
+    // Проверки теста
     check(res, 
         {'status was 200': (r) => r.status == 200,
         'response time < 500ms': (r) => r.timings.duration < 500,
